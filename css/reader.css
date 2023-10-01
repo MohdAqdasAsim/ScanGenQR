@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 10% !important;
+  overflow: hidden;
 }
 
 #reader>h1 {
@@ -44,6 +45,12 @@
   border: 3px solid #448686;
   font-weight: 400;
   color: #448686;
+}
+
+#change-camera-btn {
+  width: 10%;
+  padding: 0px;
+  border-radius: 50px;
 }
 
 .scanner-form {

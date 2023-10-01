@@ -17,7 +17,6 @@ const videoBox = document.querySelector("video");
 
 form.addEventListener("click", (e) => {
   imageInput.click();
-  // e.preventDefault();
 });
 
 imageInput.addEventListener("change", event => {
@@ -78,8 +77,15 @@ camera.addEventListener("click", () => {
   Instascan.Camera.getCameras().then(cameras => {
     if (cameras.length > 0) {
       let camera = cameras[0];
-      changeCameraBtn.addEventListener("click",() => {
-        
+      changeCameraBtn.addEventListener("click", () => {
+        // var selectedCam = cameras[0];
+        // camera.forEach(cameras, (i, c) => {
+        //   if (c.name.indexOf('back') != -1) {
+        //     selectedCam = c;
+        //     return false;
+        //   }
+        // });
+        alert("Unable to change camera")
       });
 
       scanner.start(camera).then(() => {
