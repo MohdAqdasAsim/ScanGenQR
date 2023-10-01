@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code</title>
+
+  <link rel="shortcut icon" href="./QRCode.png" type="image/x-icon">
+
+  <script src="https://kit.fontawesome.com/72e8700359.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/generator.css">
+  <link rel="stylesheet" href="./css/reader.css">
+</head>
+<body>
+  <div class="container">
+    <div id="modes">
+      <button id="generator-btn" class="buttons active">Generator</button>
+      <button id="reader-btn" class="buttons">Reader</button>
+    </div>
+
+    <div id="generator">
+      <h1>QrCode Generator</h1>
+      <p>Paste your text or url</p>
+      <div id="text-field-div">
+        <input type="text" name="text-field" id="text-field" placeholder="https://google.com">
+      </div>
+      <div id="btns-div">
+        <button id="generate-btn" class="btns">Genetrate</button>
+        <input type="number" name="number-field" id="number-field" placeholder="200" value="200">
+      </div>
+
+      <div>
+        <div class="image-box"></div>
+        <div class="download">DOWNLOAD<i class="fa-solid fa-download"></i></div>
+      </div>
+    </div>
+
+    <div id="reader" style="display: none;">
+      <h1>QrCode Reader&ThinSpace;<span id="camera"><i class="fa-solid fa-camera"></i></span><span id="stop" style="display: none;"><i class="fa-solid fa-stop"></i></span></h1>
+      <form class="scanner-form">
+        <input type="file" id="image-input" accept="image/*" hidden>
+
+        <img src="" alt="qr" id="image-display">
+        <video></video>
+
+        <div id="content">
+          <i class="fa-solid fa-cloud-arrow-up fa-2xl"></i>
+          <p id="textpara">Upload QR Code to Scan</p>
+        </div>
+      </form>
+      <textarea disabled class="textarea-field">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi deleniti est, molestias pariatur nostrum eaque enim animi unde maiores, alias temporibus quasi earum minus dolorum voluptates porro totam, excepturi soluta!
+      </textarea>
+      <div id="ccbtn-box">
+        <button class="ccbtn" id="close-btn" style="display: none;">Close</button>
+        <button class="ccbtn" id="change-camera-btn" style="display: none;"><i class="fa-solid fa-circle-arrow-right"></i></button>
+        <button class="ccbtn" id="copy-btn" style="display: none;">Copy</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./js/script.js"></script>
+<script src="./js/generator.js"></script>
+<script src="./js/reader.js"></script>
+<script src="./js/instascan.min.js"></script>
+</html>

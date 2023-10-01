@@ -1,0 +1,90 @@
+#reader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#reader>h1 {
+  margin: 10px;
+  color: #448686;
+}
+
+.textarea-field {
+  width: 0;
+  height: 0px;
+  margin: 10px 0px;
+  transition: height .2s;
+}
+
+.textarea-field.active {
+  width: 100%;
+  height: 100px;
+}
+
+#ccbtn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.ccbtn {
+  width: 40%;
+  padding: 10px 30px;
+  background-color: #448686;
+  outline: none;
+  border: 3px solid #448686;
+  color: aliceblue;
+  font-weight: 400;
+}
+
+.ccbtn:hover {
+  background-color: aliceblue;
+  border: 3px solid #448686;
+  font-weight: 400;
+  color: #448686;
+}
+
+.scanner-form {
+  width: 400px;
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #448686;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.scanner-form img {
+  max-width: 180px;
+  display: none;
+}
+
+.scanner-form video {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #448686;
+}
+
+@media only screen and (max-width: 400px) {
+  .scanner-form {
+    width: 100%;
+    height: 100%;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #448686;
+    border-radius: 10px;
+  }
+}

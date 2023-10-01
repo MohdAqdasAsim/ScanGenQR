@@ -1,0 +1,85 @@
+#generator {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#generator>h1 {
+  margin: 10px;
+  color: #448686;
+}
+
+#generator>p {
+  margin: 10px;
+  opacity: 0.8;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #448686;
+}
+
+#text-field-div,#btns-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#text-field {
+  width: 100%;
+  height: 20px;
+  padding: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  border: 2px solid #448686;
+  color: #448686;
+}
+
+#btns-div {
+  justify-content: space-between;
+}
+
+.btns {
+  width: 40%;
+  padding: 10px 30px;
+  background-color: #448686;
+  outline: none;
+  border: 3px solid #448686;
+  color: aliceblue;
+  font-weight: 400;
+}
+
+.btns:hover {
+  background-color: aliceblue;
+  border: 3px solid #448686;
+  font-weight: 400;
+  color: #448686;
+}
+
+#number-field {
+  width: 10%;
+  padding: 10px 30px;
+  outline: none;
+  border: 3px solid #448686;
+  color: #448686;
+  font-weight: 400;
+}
+
+.image-box {
+  width: calc(100% - 40px);
+  height: 0px;
+  margin: 20px;
+  border: 0px dashed #448686;
+  border-radius: 10px;
+  background: url();
+  transition: height .2s;
+}
+
+.download {
+  height: 0px;
+  display: none;
+  justify-content: center;
+  color: #448686;
+  margin-bottom: 15px;
+  transition: height .2s;
+  cursor: pointer;
+}
