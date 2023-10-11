@@ -31,7 +31,7 @@ function fetchRequest(file) {
   formData.append("file", file);
 
   fetch("http://api.qrserver.com/v1/read-qr-code/", {
-    method: "POST", body: formData
+    method: "GET", body: formData
   }).then(res => res.json()).then(result => {
     scanText.innerText = "Scanning QR Code...";
 
@@ -76,7 +76,7 @@ camera.addEventListener("click", () => {
   scanner = new Instascan.Scanner({ video: videoBox });
   Instascan.Camera.getCameras().then(cameras => {
     if (cameras.length > 0) {
-      let camera = cameras[0];
+      // let camera = cameras[0];
       changeCameraBtn.addEventListener("click", () => {
         // var selectedCam = cameras[0];
         // camera.forEach(cameras, (i, c) => {
@@ -88,7 +88,7 @@ camera.addEventListener("click", () => {
         alert("Unable to change camera")
       });
 
-      scanner.start(camera).then(() => {
+      scanner.start(cameras[0]).then(() => {
         form.classList.add("active-video");
         videoBox.style.display = "block";
         content.style.display = "none";
